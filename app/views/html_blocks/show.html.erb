@@ -1,0 +1,17 @@
+<p>
+  <strong>ExactPath:</strong>
+  <%= @html_block.exact_path %>
+</p>
+
+<p>
+  <strong>PatternPath:</strong>
+  <%= @html_block.pattern_path %>
+</p>
+
+<p>
+  <strong>HtmlContent:</strong>
+  <%= @html_block.html_content %>
+</p>
+
+<%= link_to 'Edit', edit_html_block_path(@html_block) %> |
+<%= link_to 'Back', html_blocks_path %>

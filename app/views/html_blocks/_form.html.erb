@@ -1,0 +1,14 @@
+<%= form_for(block) do |f| %>
+
+    <h3>Exact path:</h3>
+    <%= f.text_field :exact_path %>
+
+    <h3>Pattern path(example: %path, %path%, path%):</h3>
+    <%= f.text_field :pattern_path %>
+
+    <h3>Html content:</h3>
+    <%= f.text_area :html_content, rows: 10, cols: 60 %>
+    <br/>
+
+    <%= f.submit %>
+<% end %>

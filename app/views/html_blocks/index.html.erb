@@ -1,0 +1,29 @@
+<h1>Html Blocks</h1>
+
+<table>
+  <thead>
+    <tr style="text-align: left">
+      <th>Html content</th>
+      <th>Exact path</th>
+      <th>Pattern path</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @html_blocks.each do |html_block| %>
+      <tr>
+        <td><%= truncate html_block.html_content %></td>
+        <td><%= truncate html_block.exact_path %></td>
+        <td><%= truncate html_block.pattern_path %></td>
+        <td><%= link_to 'Show', html_block %></td>
+        <td><%= link_to 'Edit', edit_html_block_path(html_block) %></td>
+        <td><%= link_to 'Destroy', html_block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Html Block', new_html_block_path %>

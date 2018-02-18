@@ -1,0 +1,3 @@
+<% HtmlBlock.render_blocks(request.original_fullpath).each do |block| %>
+  <%= block.html_content.html_safe %>
+<% end %>
